@@ -1,0 +1,16 @@
+using UnityEngine;
+
+public class Transform : MonoBehaviour
+{
+    private void Start()
+    {
+        // Move the GameObject
+        transform.position = new Vector3(2f, 0f, 0f);
+
+        // Rotate the GameObject
+        transform.rotation = Quaternion.Euler(0f, 45f, 0f);
+
+        // Scale the GameObject
+        transform.localScale = new Vector3(2f, 2f, 2f);
+    }
+}
