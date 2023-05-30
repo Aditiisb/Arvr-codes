@@ -1,0 +1,25 @@
+using UnityEngine;
+
+public class ColorChange : MonoBehaviour
+{
+    private Renderer objectRenderer;
+    private Color originalColor;
+
+    private void Start()
+    {
+        objectRenderer = GetComponent<Renderer>();
+        originalColor = objectRenderer.material.color;
+    }
+
+    private void OnMouseDown()
+    {
+        // Change the color to a new color (e.g., red) when mouse button is pressed down
+        objectRenderer.material.color = Color.red;
+    }
+
+    private void OnMouseUp()
+    {
+        // Restore the original color when mouse button is released
+        objectRenderer.material.color = originalColor;
+    }
+}
